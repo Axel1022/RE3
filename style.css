@@ -11,6 +11,7 @@ body {
   color: #2c3e50;
   line-height: 1.6;
   scroll-behavior: smooth;
+  margin-top: 10px;
 }
 
 /* Contenedor central que aplica en todo el proyecto */
