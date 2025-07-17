@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CleanApp - Tecnología para un entorno más limpio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">CleanApp</h1>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#tips" class="nav-link">Tips</a></li>
+                    <li><a href="#quiz" class="nav-link">Quiz</a></li>
+                    <li><a href="#stats" class="nav-link">Estadísticas</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#mapa" class="nav-link">Mapa</a></li>
+                    <li><a href="#compromiso" class="nav-link">Compromiso</a></li>
+                    <li><button id="theme-toggle" aria-label="Cambiar tema">🌙</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container">
+        <section id="inicio" class="section container">
+            <h2>¿Por qué es importante cuidar el planeta?</h2>
+            <p>El manejo adecuado de la basura es fundamental para preservar la salud de nuestro planeta, el agua y el
+                aire. Con CleanApp, te ayudamos a tomar acciones concretas y responsables.</p>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60"
+                alt="Naturaleza limpia" class="responsive-img" />
+        </section>
+
+        <section id="tips" class="section container">
+            <h2>Consejos para reducir tu basura</h2>
+            <ul class="tips-list">
+                <li>♻️ Separa correctamente tus residuos: orgánicos, reciclables y no reciclables.</li>
+                <li>🌿 Reutiliza bolsas y envases para darle una segunda vida.</li>
+                <li>🚯 Evita tirar basura en las calles y participa en limpiezas comunitarias.</li>
+                <li>🛒 Reduce el consumo de productos desechables.</li>
+            </ul>
+        </section>
+
+        <section id="quiz" class="section container">
+            <h2>Test de conocimiento ambiental</h2>
+            <p>¡Pon a prueba qué tanto sabes sobre reciclaje y manejo de basura!</p>
+            <div id="quizContainer" class="quiz-container"></div>
+            <button class="btn" id="startQuizBtn">Iniciar Quiz</button>
+        </section>
+
+        <section id="stats" class="section container stats-section">
+            <h2>Estadísticas de impacto</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1200">0</span>
+                    <p>Toneladas recicladas</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="850">0</span>
+                    <p>Usuarios comprometidos</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="45">0</span>
+                    <p>Proyectos comunitarios</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="section container gallery-section">
+            <h2>Galería ambiental</h2>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=400&q=60"
+                    alt="Reciclaje de plástico" class="gallery-img" />
+                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=60"
+                    alt="Voluntarios limpiando playa" class="gallery-img" />
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=400&q=60"
+                    alt="Basura en la calle" class="gallery-img" />
+                <img src="https://images.unsplash.com/photo-1517511620798-cec17d428bc0?auto=format&fit=crop&w=400&q=60"
+                    alt="Árboles y naturaleza" class="gallery-img" />
+            </div>
+        </section>
+
+        <section id="mapa" class="section container map-section">
+            <h2>Puntos de reciclaje cercanos</h2>
+            <div class="map-container">
+
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.0705321526343!2d-69.91414252496311!3d18.480464082605337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89cbb41fb893%3A0xa94ee646ac4aaa0a!2sINFOTEP!5e0!3m2!1ses-419!2sdo!4v1752763889533!5m2!1ses-419!2sdo"
+                    width="100%" height="400"
+                    style="border:0; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <section id="compromiso" class="section container commitment-section">
+            <h2>Comprométete a cuidar el planeta</h2>
+            <form id="commitmentForm" novalidate>
+                <label for="commitmentInput">Escribe una acción que vas a realizar esta semana para reducir tu impacto
+                    ambiental:</label>
+                <textarea id="commitmentInput" placeholder="Ejemplo: No usar bolsas plásticas..." rows="3"
+                    required></textarea>
+                <div class="form-actions">
+                    <button type="submit" class="btn">Guardar Compromiso</button>
+                </div>
+                <p id="commitmentMessage" class="message"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="modalClose" class="modal-close">&times;</span>
+            <h3>¡Gracias por tu compromiso!</h3>
+            <p>Tu acción ayudará a construir un futuro más limpio y sostenible. 🌱</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© 2025 CleanApp | La Mermelada</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f0faf3;
+  color: #2c3e50;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Contenedor central que aplica en todo el proyecto */
+.container {
+  max-width: 960px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header que ocupa todo el ancho */
+header {
+  background-color: #27ae60;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+}
+
+/* Contenido del header centrado */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a,
+nav ul li button {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li button:hover,
+nav ul li a.active {
+  background-color: #1e8449;
+}
+
+/* Main Padding to prevent content behind fixed header */
+main {
+  padding-top: 80px;
+}
+
+/* Sections */
+.section {
+  background: white;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  color: #27ae60;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.responsive-img {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Tips List */
+.tips-list {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.tips-list li {
+  padding-left: 1.8rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.tips-list li::before {
+  content: '✔';
+  color: #27ae60;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #1e8449;
+}
+
+/* Quiz */
+.quiz-container {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.quiz-container div {
+  margin-bottom: 1.6rem;
+}
+
+.quiz-container label {
+  cursor: pointer;
+  display: block;
+  margin: 0.4rem 0;
+  padding-left: 28px;
+  position: relative;
+  user-select: none;
+}
+
+.quiz-container input[type="radio"] {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  cursor: pointer;
+}
+
+/* Stats */
+.stats-section .stats-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  flex: 1 1 30%;
+  text-align: center;
+  background-color: #e6f2e8;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+/* Gallery */
+.gallery-section .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 1rem;
+}
+
+.gallery-img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Map */
+.map-container iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Commitment Form */
+.commitment-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #27ae60;
+  outline: none;
+}
+
+.form-actions {
+  margin-top: 1rem;
+}
+
+.message {
+  margin-top: 0.7rem;
+  font-weight: 600;
+  color: #27ae60;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .stats-section .stats-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-item {
+    flex: none;
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem 0;
+  }
+  .header-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+/* Tema oscuro */
+.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme header {
+  background-color: #1b5e20;
+}
+
+.dark-theme .section {
+  background-color: #222;
+  box-shadow: 0 4px 12px rgba(0, 100, 0, 0.6);
+}
+
+.dark-theme .tips-list li::before {
+  color: #81c784;
+}
+
+.dark-theme .btn {
+  background-color: #388e3c;
+}
+
+.dark-theme .btn:hover {
+  background-color: #1b5e20;
+}
+
+.dark-theme .stat-item {
+  background-color: #2c2c2c;
+}
+
+.dark-theme .modal-content {
+  background-color: #333;
+  color: #eee;
+}
+
+.dark-theme nav ul li a,
+.dark-theme nav ul li button {
+  color: #c8e6c9;
+}
+
+.dark-theme nav ul li a.active,
+.dark-theme nav ul li a:hover,
+.dark-theme nav ul li button:hover {
+  background-color: #81c784;
+}
